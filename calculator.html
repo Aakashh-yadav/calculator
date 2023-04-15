@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Performing Actions on two Number</title>
+    <link href="css/calculator.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script>
+      function action(p1) {
+        if (p1 == "+") {
+          document.getElementById("rslt").value =
+            parseInt(document.getElementById("no1").value) +
+            parseInt(document.getElementById("no2").value);
+        } else if (p1 == "-") {
+          document.getElementById("rslt").value =
+            document.getElementById("no1").value -
+            document.getElementById("no2").value;
+        } else if (p1 == "*") {
+          document.getElementById("rslt").value =
+            document.getElementById("no1").value *
+            document.getElementById("no2").value;
+        } else if (p1 == "/") {
+          document.getElementById("rslt").value =
+            document.getElementById("no1").value /
+            document.getElementById("no2").value;
+        }
+      }
+    </script>
+    <h2 class="main" style="color: #323232">calculator</h2>
+    <div id="1st">
+      <label class="main" style="opacity: 0.7">enter 1st number&nbsp; </label
+      ><b>:</b>
+      <input type="number" size="50px" id="no1" />
+    </div>
+    <div id="2nd">
+      <label class="main" style="opacity: 0.7">enter 2nd number </label><b>:</b>
+      <input type="number" size="50px" id="no2" />
+    </div>
+    <div>
+      <label class="main" style="opacity: 0.7"
+        >result
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+      ><b>:</b>
+      <input type="number" size="50px" id="rslt" />
+    </div>
+    <div style="width: 100%; opacity: 0.7">
+      <div class="btn" id="div" style="float: left">
+        <button onclick="action('/')">divide</button>&nbsp;
+      </div>
+      <div class="btn" id="mul" style="float: left">
+        <button onclick="action('*')">multiply</button>&nbsp;
+      </div>
+      <div class="btn" id="sub" style="float: left">
+        &nbsp;
+        <button onclick="action('-')">sub</button>
+      </div>
+      <div class="btn" id="add" style="float: left">
+        &nbsp;
+        <button onclick="action('+')">add</button>
+      </div>
+    </div>
+  </body>
+</html>
